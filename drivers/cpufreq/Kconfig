@@ -185,6 +185,11 @@ config CPU_FREQ_DEFAULT_GOV_BARRY_ALLEN
 	  loading your cpufreq low-level hardware driver, using the
 	  'barry_allen' governor for latency-sensitive workloads.
 
+config CPU_FREQ_DEFAULT_GOV_DESPAIR
+	bool "despair"
+	select CPU_FREQ_GOV_DESPAIR
+	help
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
