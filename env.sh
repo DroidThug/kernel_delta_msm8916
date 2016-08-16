@@ -1,6 +1,6 @@
-KERNEL_DIR=/and/thug/hydra
+KERNEL_DIR=/and/thug/delta
 KERN_IMG=$KERNEL_DIR/arch/arm64/boot/Image
-DTBTOOL=$KERNEL_DIR//tools/dtbToolCM
+DTBTOOL=$KERNEL_DIR/tools/dtbToolCM
 TOOLCHAIN_DIR=~/and/tc/ub/bin
 export ARCH=arm64
 # export CCOMPILE=$CROSS_COMPILE
