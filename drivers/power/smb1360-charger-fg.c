@@ -1669,6 +1669,7 @@ static int smb1360_set_appropriate_usb_current(struct smb1360_chip *chip)
 {
 	int rc = 0, i, therm_ma, current_ma;
 	int path_current = chip->usb_psy_ma;
+
 #ifdef CONFIG_MACH_SPIRIT
 	u8 icl_reg = 0;
 #endif
@@ -1679,6 +1680,9 @@ static int smb1360_set_appropriate_usb_current(struct smb1360_chip *chip)
 	 * configuration and since it is the only source of power we should
 	 * not change it
 	 */
+#ifdef CONFIG_THUNDERCHARGE_CONTROL
+	current_ma = custom_current;
+#else
 	if (!chip->batt_present) {
 		pr_debug("ignoring current request since battery is absent\n");
 		return 0;
@@ -1701,6 +1705,8 @@ static int smb1360_set_appropriate_usb_current(struct smb1360_chip *chip)
 			current_ma = min(current_ma, chip->warm_bat_ma);
 		else if (chip->batt_cool)
 			current_ma = min(current_ma, chip->cool_bat_ma);
+
+	#endif	
 	}
 
 	if (current_ma <= 2) {
@@ -2191,10 +2197,10 @@ static void smb1360_external_power_changed(struct power_supply *psy)
         if(!((prop.intval / 1000) ==0))
         {
         pr_info("Using custom current of %d",custom_current);
-		chip->current_limit = custom_current;
+		current_limit = custom_current;
         }
         else
-        chip->current_limit = 0;
+                current_limit = 0;
 #else
         current_limit = prop.intval / 1000;
 #endif
