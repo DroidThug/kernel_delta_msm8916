@@ -1,4 +1,4 @@
-KERNEL_DIR=/and/thug/delta
+KERNEL_DIR=/and/thug/hydra
 KERN_IMG=$KERNEL_DIR/arch/arm64/boot/Image
 DTBTOOL=$KERNEL_DIR/tools/dtbToolCM
 TOOLCHAIN_DIR=~/and/tc/exp/bin
