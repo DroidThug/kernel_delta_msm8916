@@ -1,0 +1,13 @@
+KERNEL_DIR=/and/thug/delta
+KERN_IMG=$KERNEL_DIR/arch/arm64/boot/Image
+DTBTOOL=$KERNEL_DIR/tools/dtbToolCM
+TOOLCHAIN_DIR=~/and/tc/exp/bin
+export ARCH=arm64
+# export CCOMPILE=$CROSS_COMPILE
+# export CROSS_COMPILE=aarch64-linux-android-
+export CROSS_COMPILE=/and/thug/tc/exp/bin/aarch64-linux-android-
+export PATH=$PATH:~/and/thug/tc/exp/bin
+export KBUILD_BUILD_USER="Thug"
+export KBUILD_BUILD_HOST="EvoqueUnit"
+STRIP="/and/thug/tc/exp/bin/aarch64-linux-android-strip"
+MODULES_DIR=$KERNEL_DIR/drivers/staging/prima
