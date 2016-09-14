@@ -121,6 +121,7 @@
 
 			qcom,gpu-pwrlevel@6 {
 				reg = <6>;
+>>>>>>> a600c99... GPU: Overclock to 550 MHz
 				qcom,gpu-freq = <19200000>;
 				qcom,bus-freq = <0>;
 			};
