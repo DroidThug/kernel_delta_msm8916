@@ -31,7 +31,7 @@ config THUNDERPLUG_CONTROL
 	  on a octa core device.
 
 config MAKO_HOTPLUG
- 	bool "Mako Hotplug"
- 	default n
- 	help
- 	  Mako Hotplug: A custom hotplug by fransico franco
+	bool "Mako Hotplug"
+	default n
+	help
+	  Mako Hotplug: A custom hotplug by fransico franco
