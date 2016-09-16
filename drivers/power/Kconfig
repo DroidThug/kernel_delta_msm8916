@@ -581,7 +581,7 @@ config YL_BQ24157_CHARGER
 
 config THUNDERCHARGE_CONTROL
      bool "Enable ThunderCharge Current Controlling mechanism"
-     depends on YL_BQ24157_CHARGER
+     depends on SMB1360_CHARGER_FG
      help
        Say Y here to enable ability to adjust charger current
 
