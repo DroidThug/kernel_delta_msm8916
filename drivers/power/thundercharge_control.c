@@ -25,7 +25,7 @@
 #define MAX_VBUS_CURRENT    1500
 #define THUNDERCHARGE       "thundercharge"
 int mswitch=0;
-int custom_current=1100;
+int custom_current=500;
 
 #define DRIVER_VERSION  1
 #define DRIVER_SUBVER 0
