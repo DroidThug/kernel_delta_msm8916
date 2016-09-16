@@ -151,15 +151,6 @@ config CPU_FREQ_DEFAULT_GOV_BLU_ACTIVE
 	bool "blu_active"
 	select CPU_FREQ_GOV_BLU_ACTIVE
 
-config CPU_FREQ_DEFAULT_GOV_IMPULSE
-	bool "impulse"
-	select CPU_FREQ_GOV_IMPULSE
-	help
-	  Use the CPUFreq governor 'impulse' as default. This allows
-	  you to get a full dynamic cpu frequency capable system by simply
-	  loading your cpufreq low-level hardware driver, using the
-	  'impulse' governor for latency-sensitive workloads.
-
 config CPU_FREQ_DEFAULT_GOV_INTEL
 	bool "intel"
 	select CPU_FREQ_GOV_INTEL
@@ -339,6 +330,7 @@ config CPU_FREQ_GOV_PEGASUSQ
 config CPU_FREQ_GOV_BLU_ACTIVE
 	tristate "'blu_active' cpufreq policy governor"
 
+<<<<<<< HEAD
 config CPU_FREQ_GOV_IMPULSE
 	tristate "'interactive' cpufreq policy governor"
 	help
@@ -372,6 +364,8 @@ config CPU_FREQ_GOV_LIONFISH
 
 	  If in doubt, say N.
 
+=======
+>>>>>>> parent of f79a0f0... Added Impulse Cpu Governor
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
 	depends on CPU_FREQ
